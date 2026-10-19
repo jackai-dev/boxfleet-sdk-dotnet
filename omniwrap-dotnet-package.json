@@ -1,0 +1,12 @@
+{
+  "$schema": "https://omniwrap.dev/schemas/dotnet-package/v2.json",
+  "archive_type": "nupkg",
+  "assembly_name": "BoxFleetSdk",
+  "assembly_version": "0.3.0.0",
+  "package_id": "BoxFleetSdk",
+  "public_client_type": "BoxFleet.Sdk.ApiClient",
+  "root_namespace": "BoxFleet.Sdk",
+  "source_version": "0.3.0",
+  "target_framework": "net8.0",
+  "version": "0.3.0"
+}
