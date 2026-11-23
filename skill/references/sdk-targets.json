@@ -1,0 +1,412 @@
+{
+  "contract_fingerprint": "e3fd4c744ae8933c0e0bd0c21a692897795a14657e577fb82108500d39f2ac8d",
+  "sdk_targets_version": "1.1.0",
+  "targets": [
+    {
+      "identity": {
+        "coordinates": "BoxFleetHostedControlPlaneBoxfleetIoSdk 0.3.0",
+        "ecosystem": "NuGet",
+        "entry": "BoxFleetHostedControlPlaneBoxfleetIo.Sdk.ApiClient",
+        "import": "using BoxFleetHostedControlPlaneBoxfleetIo.Sdk;"
+      },
+      "operations": {
+        "cancelJob": {
+          "member": "Jobs.CancelAsync",
+          "method": "POST",
+          "path": "/v1/jobs/{jobId}/cancel",
+          "resource": "Jobs",
+          "signature": "public Task CancelAsync(\nstring jobId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "closeHostedWorkspace": {
+          "member": "Workspaces.CloseHostedAsync",
+          "method": "POST",
+          "path": "/v1/workspaces/{workspaceId}/close",
+          "resource": "Workspaces",
+          "signature": "public Task CloseHostedAsync(\nGuid workspaceId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "closePersistentBox": {
+          "member": "Organizations.ClosePersistentBoxAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/close",
+          "resource": "Organizations",
+          "signature": "public Task<HostedPersistentBoxClose> ClosePersistentBoxAsync(\nstring organizationId,\nGuid boxId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "controlUser": {
+          "member": "Admin.ControlUserAsync",
+          "method": "POST",
+          "path": "/v1/admin/users",
+          "resource": "Admin",
+          "signature": "public Task ControlUserAsync(\nIReadOnlyDictionary<string, JsonElement> body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "createBillingPortal": {
+          "member": "Organizations.CreateBillingPortalAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/billing/portal",
+          "resource": "Organizations",
+          "signature": "public Task CreateBillingPortalAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "createBox": {
+          "member": "Organizations.CreateBoxAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/boxes",
+          "resource": "Organizations",
+          "signature": "public Task CreateBoxAsync(\nstring organizationId,\nCreateBoxRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "createCheckout": {
+          "member": "Organizations.CreateCheckoutAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/billing/checkout",
+          "resource": "Organizations",
+          "signature": "public Task CreateCheckoutAsync(\nstring organizationId,\nCreateCheckoutRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getAccountsConfig": {
+          "member": "Accounts.GetConfigAsync",
+          "method": "GET",
+          "path": "/v1/accounts/config",
+          "resource": "Accounts",
+          "signature": "public Task GetConfigAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getAdminConsole": {
+          "member": "Admin.GetConsoleAsync",
+          "method": "GET",
+          "path": "/v1/admin/console",
+          "resource": "Admin",
+          "signature": "public Task GetConsoleAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getAdminPlans": {
+          "member": "Admin.GetPlansAsync",
+          "method": "GET",
+          "path": "/v1/admin/plans",
+          "resource": "Admin",
+          "signature": "public Task GetPlansAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getAuthGate": {
+          "member": "Auth.GetGateAsync",
+          "method": "GET",
+          "path": "/v1/auth/gate",
+          "resource": "Auth",
+          "signature": "public Task GetGateAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getBilling": {
+          "member": "Organizations.GetBillingAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/billing",
+          "resource": "Organizations",
+          "signature": "public Task GetBillingAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getBox": {
+          "member": "Organizations.GetBoxAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/boxes/{boxId}",
+          "resource": "Organizations",
+          "signature": "public Task GetBoxAsync(\nstring organizationId,\nGuid boxId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getEntitlements": {
+          "member": "Organizations.GetEntitlementsAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/entitlements",
+          "resource": "Organizations",
+          "signature": "public Task GetEntitlementsAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getFleet": {
+          "member": "Organizations.GetFleetAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/fleet",
+          "resource": "Organizations",
+          "signature": "public Task GetFleetAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getFleetPolicy": {
+          "member": "Organizations.GetFleetPolicyAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/fleet/policy",
+          "resource": "Organizations",
+          "signature": "public Task GetFleetPolicyAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getHealth": {
+          "member": "Health.GetAsync",
+          "method": "GET",
+          "path": "/health",
+          "resource": "Health",
+          "signature": "public Task GetAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getHostedWorkspace": {
+          "member": "Workspaces.GetHostedAsync",
+          "method": "GET",
+          "path": "/v1/workspaces/{workspaceId}",
+          "resource": "Workspaces",
+          "signature": "public Task GetHostedAsync(\nGuid workspaceId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getHostedWorkspaceOperation": {
+          "member": "Workspaces.GetHostedOperationAsync",
+          "method": "GET",
+          "path": "/v1/workspaces/{workspaceId}/operations/{operationId}",
+          "resource": "Workspaces",
+          "signature": "public Task GetHostedOperationAsync(\nGuid workspaceId,\nGuid operationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getHostedWorkspaceSource": {
+          "member": "Workspaces.GetHostedSourceAsync",
+          "method": "GET",
+          "path": "/v1/workspaces/{workspaceId}/source",
+          "resource": "Workspaces",
+          "signature": "public Task GetHostedSourceAsync(\nGuid workspaceId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getJob": {
+          "member": "Jobs.GetAsync",
+          "method": "GET",
+          "path": "/v1/jobs/{jobId}",
+          "resource": "Jobs",
+          "signature": "public Task GetAsync(\nstring jobId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getPersistentBox": {
+          "member": "Organizations.GetPersistentBoxAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}",
+          "resource": "Organizations",
+          "signature": "public Task<JsonElement> GetPersistentBoxAsync(\nstring organizationId,\nGuid boxId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getPersistentBoxProviderUsage": {
+          "member": "Organizations.GetPersistentBoxProviderUsageAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/usage",
+          "resource": "Organizations",
+          "signature": "public Task<JsonElement> GetPersistentBoxProviderUsageAsync(\nstring organizationId,\nGuid boxId,\nDateTimeOffset _from,\nDateTimeOffset to,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getPlans": {
+          "member": "Plans.GetAsync",
+          "method": "GET",
+          "path": "/v1/plans",
+          "resource": "Plans",
+          "signature": "public Task GetAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "ingestTelemetry": {
+          "member": "Telemetry.IngestAsync",
+          "method": "POST",
+          "path": "/v1/telemetry/ingest",
+          "resource": "Telemetry",
+          "signature": "public Task IngestAsync(\nIReadOnlyDictionary<string, JsonElement> body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listBoxes": {
+          "member": "Organizations.ListBoxesAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/boxes",
+          "resource": "Organizations",
+          "signature": "public Task ListBoxesAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listHostedWorkspaces": {
+          "member": "Workspaces.ListHostedAsync",
+          "method": "GET",
+          "path": "/v1/workspaces",
+          "resource": "Workspaces",
+          "signature": "public Task ListHostedAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listInvoices": {
+          "member": "Organizations.ListInvoicesAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/billing/invoices",
+          "resource": "Organizations",
+          "signature": "public Task ListInvoicesAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listJobEvents": {
+          "member": "Jobs.ListEventsAsync",
+          "method": "GET",
+          "path": "/v1/jobs/{jobId}/events",
+          "resource": "Jobs",
+          "signature": "public Task ListEventsAsync(\nstring jobId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listJobs": {
+          "member": "Jobs.ListAsync",
+          "method": "GET",
+          "path": "/v1/jobs",
+          "resource": "Jobs",
+          "signature": "public Task ListAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listMembers": {
+          "member": "Organizations.ListMembersAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/members",
+          "resource": "Organizations",
+          "signature": "public Task ListMembersAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listObservedBoxes": {
+          "member": "Organizations.ListObservedBoxesAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/observed-boxes",
+          "resource": "Organizations",
+          "signature": "public Task<JsonElement> ListObservedBoxesAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listPersistentBoxOffers": {
+          "member": "Organizations.ListPersistentBoxOffersAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/offers",
+          "resource": "Organizations",
+          "signature": "public Task<JsonElement> ListPersistentBoxOffersAsync(\nstring organizationId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listPersistentBoxes": {
+          "member": "Organizations.ListPersistentBoxesAsync",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes",
+          "resource": "Organizations",
+          "signature": "public Task<JsonElement> ListPersistentBoxesAsync(\nstring organizationId,\nlong? limit = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listUsers": {
+          "member": "Admin.ListUsersAsync",
+          "method": "GET",
+          "path": "/v1/admin/users",
+          "resource": "Admin",
+          "signature": "public Task ListUsersAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listWaitlist": {
+          "member": "Waitlist.ListAsync",
+          "method": "GET",
+          "path": "/v1/waitlist",
+          "resource": "Waitlist",
+          "signature": "public Task ListAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "openHostedWorkspace": {
+          "member": "Workspaces.OpenHostedAsync",
+          "method": "POST",
+          "path": "/v1/workspaces",
+          "resource": "Workspaces",
+          "signature": "public Task OpenHostedAsync(\nOpenHostedWorkspaceRequest body,\nstring? idempotencyKey = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "provisionPersistentBox": {
+          "member": "Organizations.ProvisionPersistentBoxAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes",
+          "resource": "Organizations",
+          "signature": "public Task ProvisionPersistentBoxAsync(\nstring organizationId,\nProvisionPersistentBoxRequest body,\nstring? idempotencyKey = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "putFleetPolicy": {
+          "member": "Organizations.PutFleetPolicyAsync",
+          "method": "PUT",
+          "path": "/v1/organizations/{organizationId}/fleet/policy",
+          "resource": "Organizations",
+          "signature": "public Task PutFleetPolicyAsync(\nstring organizationId,\nPutFleetPolicyRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "readTelemetry": {
+          "member": "Admin.ReadTelemetryAsync",
+          "method": "GET",
+          "path": "/v1/admin/telemetry",
+          "resource": "Admin",
+          "signature": "public Task ReadTelemetryAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "reconcilePersistentBox": {
+          "member": "Organizations.ReconcilePersistentBoxAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/reconcile",
+          "resource": "Organizations",
+          "signature": "public Task<JsonElement> ReconcilePersistentBoxAsync(\nstring organizationId,\nGuid boxId,\nReconcilePersistentBoxRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "recoverHostedWorkspace": {
+          "member": "Workspaces.RecoverHostedAsync",
+          "method": "POST",
+          "path": "/v1/workspaces/{workspaceId}/recover",
+          "resource": "Workspaces",
+          "signature": "public Task RecoverHostedAsync(\nGuid workspaceId,\nRecoverHostedWorkspaceRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "register": {
+          "member": "Auth.RegisterAsync",
+          "method": "POST",
+          "path": "/v1/auth/register",
+          "resource": "Auth",
+          "signature": "public Task RegisterAsync(\nIReadOnlyDictionary<string, JsonElement> body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "removeMember": {
+          "member": "Organizations.RemoveMemberAsync",
+          "method": "DELETE",
+          "path": "/v1/organizations/{organizationId}/members/{userId}",
+          "resource": "Organizations",
+          "signature": "public Task RemoveMemberAsync(\nstring organizationId,\nstring userId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "requestAccess": {
+          "member": "Waitlist.RequestAccessAsync",
+          "method": "POST",
+          "path": "/v1/waitlist",
+          "resource": "Waitlist",
+          "signature": "public Task RequestAccessAsync(\nIReadOnlyDictionary<string, JsonElement> body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "runHostedWorkspace": {
+          "member": "Workspaces.RunHostedAsync",
+          "method": "POST",
+          "path": "/v1/workspaces/{workspaceId}/run",
+          "resource": "Workspaces",
+          "signature": "public Task RunHostedAsync(\nGuid workspaceId,\nRunHostedWorkspaceRequest body,\nstring? idempotencyKey = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "startPersistentBox": {
+          "member": "Organizations.StartPersistentBoxAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/start",
+          "resource": "Organizations",
+          "signature": "public Task<JsonElement> StartPersistentBoxAsync(\nstring organizationId,\nGuid boxId,\nStartPersistentBoxRequest body,\nstring? idempotencyKey = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "stopBox": {
+          "member": "Organizations.StopBoxAsync",
+          "method": "DELETE",
+          "path": "/v1/organizations/{organizationId}/boxes/{boxId}",
+          "resource": "Organizations",
+          "signature": "public Task StopBoxAsync(\nstring organizationId,\nGuid boxId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "stopPersistentBox": {
+          "member": "Organizations.StopPersistentBoxAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/stop",
+          "resource": "Organizations",
+          "signature": "public Task<JsonElement> StopPersistentBoxAsync(\nstring organizationId,\nGuid boxId,\nStopPersistentBoxRequest body,\nstring? idempotencyKey = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "stripeWebhook": {
+          "member": "Billing.StripeWebhookAsync",
+          "method": "POST",
+          "path": "/v1/billing/stripe/webhook",
+          "resource": "Billing",
+          "signature": "public Task StripeWebhookAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "submitJob": {
+          "member": "Jobs.SubmitAsync",
+          "method": "POST",
+          "path": "/v1/jobs",
+          "resource": "Jobs",
+          "signature": "public Task SubmitAsync(\nIReadOnlyDictionary<string, JsonElement> body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "syncObservedBoxes": {
+          "member": "Organizations.SyncObservedBoxesAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/observed-boxes/sync",
+          "resource": "Organizations",
+          "signature": "public Task<JsonElement> SyncObservedBoxesAsync(\nstring organizationId,\nSyncObservedBoxesRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "updateAuthGate": {
+          "member": "Auth.UpdateGateAsync",
+          "method": "PUT",
+          "path": "/v1/auth/gate",
+          "resource": "Auth",
+          "signature": "public Task UpdateGateAsync(\nIReadOnlyDictionary<string, JsonElement> body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "updatePlan": {
+          "member": "Admin.UpdatePlanAsync",
+          "method": "POST",
+          "path": "/v1/admin/plans",
+          "resource": "Admin",
+          "signature": "public Task UpdatePlanAsync(\nIReadOnlyDictionary<string, JsonElement> body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "upsertMember": {
+          "member": "Organizations.UpsertMemberAsync",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/members",
+          "resource": "Organizations",
+          "signature": "public Task UpsertMemberAsync(\nstring organizationId,\nUpsertMemberRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "verifyLicense": {
+          "member": "Auth.VerifyLicenseAsync",
+          "method": "POST",
+          "path": "/v1/auth/verify",
+          "resource": "Auth",
+          "signature": "public Task VerifyLicenseAsync(\nIReadOnlyDictionary<string, JsonElement> body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        }
+      },
+      "package_directory": "../BoxFleetHostedControlPlaneBoxfleetIoSdk",
+      "package_manifest": "BoxFleetHostedControlPlaneBoxfleetIoSdk.csproj",
+      "reference": "api.md",
+      "renderer": "dotnet"
+    }
+  ]
+}
